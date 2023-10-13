@@ -12,7 +12,7 @@ function App() {
       name,
     };
     console.log(user);
-    fetch("http://localhost:8800/users", {
+    fetch("http://localhost:5000/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -22,6 +22,13 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+
+        if(data.insertedId)
+        {
+          alert("okkkkkkkk")
+          form.reset();
+        }
+
       });
   };
 

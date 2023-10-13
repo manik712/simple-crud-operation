@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = express();
-const port = process.env.PORT || 8800;
+const port = process.env.PORT || 5000;
 
 // MIDDLEWARE
 
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri =
-  "mongodb+srv://manik123:mqwes123wrAs.@cluster0.lis7pde.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://manik123:AFThWxCkxbPY3Udu@cluster0.lis7pde.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
