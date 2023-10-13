@@ -5,12 +5,15 @@ const Users = () => {
   console.log(Users);
   const handleDelete = (_id) => {
     console.log("delete", _id);
-    fetch(`http://localhost:5000/users#/${_id}`, {
+    fetch(`http://localhost:5000/users/${_id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.deletedCount>0){
+          alert("deleted")
+        }
       });
   };
 
