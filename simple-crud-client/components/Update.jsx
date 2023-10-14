@@ -8,7 +8,21 @@ const Update = () => {
         const email = form.email.value;
         const name = form.name.value;
         console.log(email, name);
+        const updaterUser={
+          email,name
+        }
   
+        fetch(`http://localhost:5000/users/${loaderData._id}`,{
+          method:"put",
+          headers: {
+            'content-type':'application/json',
+          },
+          body:JSON.stringify(updaterUser)
+        })
+        .then(req =>req.json())
+        .then(data =>{
+          console.log(data)
+        })
   };
 
   return (
