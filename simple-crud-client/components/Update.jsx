@@ -22,6 +22,9 @@ const Update = () => {
         .then(req =>req.json())
         .then(data =>{
           console.log(data)
+          if(data.modifiedCount>0){
+            alert('Updated')
+          }
         })
   };
 
